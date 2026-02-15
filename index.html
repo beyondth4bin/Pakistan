@@ -13,6 +13,7 @@
 body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; background-color: #0d0d0d; color: #f0f0f0; }
 .scrollbar-hide::-webkit-scrollbar { display: none; }
 .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+hr { border: 0; border-top: 1px solid #444; margin: 0; }
 </style>
 </head>
 <body>
@@ -22,7 +23,7 @@ body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; background-c
 <nav class="fixed w-full bg-black/80 backdrop-blur-md shadow-md z-50">
   <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
     <div class="flex items-center gap-2">
-      <img src="assets/logo.png" class="w-16 h-16" alt="Logo">
+      <img src="assets/logo.png" class="w-12 h-12" alt="Logo">
       <span class="font-bold text-2xl text-white">Beyond The Bin</span>
     </div>
     <div class="hidden md:flex space-x-6">
@@ -30,6 +31,7 @@ body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; background-c
       <a href="#goal" class="hover:text-blue-400 transition-all duration-300">Our Goal</a>
       <a href="#activities" class="hover:text-blue-400 transition-all duration-300">Activities</a>
       <a href="#team" class="hover:text-blue-400 transition-all duration-300">Team</a>
+      <a href="#survey" class="hover:text-blue-400 transition-all duration-300">Survey</a>
       <a href="#contact" class="hover:text-blue-400 transition-all duration-300">Contact</a>
     </div>
   </div>
@@ -47,82 +49,149 @@ body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; background-c
       <p class="text-lg md:text-xl max-w-lg animate-fadeIn delay-200">Tracking our impact and efforts to reduce plastic waste.</p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
         <div class="bg-black/70 shadow-lg rounded-lg p-6 hover:shadow-cyan-400 hover:scale-105 transition transform">
-          <p class="text-4xl font-bold counter" data-target="120">0</p>
+          <p class="text-4xl font-bold counter" data-target="29">0</p>
           <p class="mt-2 font-medium">Bottles Collected</p>
         </div>
         <div class="bg-black/70 shadow-lg rounded-lg p-6 hover:shadow-cyan-400 hover:scale-105 transition transform">
-          <p class="text-4xl font-bold counter" data-target="15">0</p>
+          <p class="text-4xl font-bold counter" data-target="7">7</p>
           <p class="mt-2 font-medium">Sessions Conducted</p>
         </div>
         <div class="bg-black/70 shadow-lg rounded-lg p-6 hover:shadow-cyan-400 hover:scale-105 transition transform">
-          <p class="text-4xl font-bold counter" data-target="50">0</p>
+          <p class="text-4xl font-bold counter" data-target="16">16</p>
           <p class="mt-2 font-medium">Surveys Submitted</p>
         </div>
       </div>
     </div>
   </div>
 </section>
+<hr>
 
 <!-- Our Goal Section -->
 
 <section id="goal" class="py-20 bg-gradient-to-r from-gray-900 via-black to-gray-900 relative overflow-hidden">
   <h2 class="text-4xl font-bold text-center text-cyan-400 mb-8">Our Goal</h2>
-  <p class="text-center text-lg max-w-3xl mx-auto">bla blah</p>
+  <p class="text-center text-lg max-w-3xl mx-auto">" We aim to spread awareness towards the types of plastic, their recognition, how recyclable they are and how they are recycled. We hope of achieving this with various quizzes, demonstrations and awareness campaigns. We will also be discussing some implications, safety measures and what actions individuals can take themselves to have an impact. "
+</p>
 </section>
+<hr>
 
 <!-- Activities Carousel -->
 
 <section id="activities" class="py-20">
   <h2 class="text-4xl font-bold text-center text-cyan-400 mb-12">Activities</h2>
-  <div class="flex overflow-x-auto scrollbar-hide gap-6 px-4">
-    <!-- 15 placeholder cards -->
-    <div class="flex flex-nowrap gap-6">
-      <div class="w-64 h-40 bg-gray-800 rounded-lg shadow-md flex items-center justify-center text-gray-500">Activity 1</div>
-      <div class="w-64 h-40 bg-gray-800 rounded-lg shadow-md flex items-center justify-center text-gray-500">Activity 2</div>
-      <div class="w-64 h-40 bg-gray-800 rounded-lg shadow-md flex items-center justify-center text-gray-500">Activity 3</div>
-      <div class="w-64 h-40 bg-gray-800 rounded-lg shadow-md flex items-center justify-center text-gray-500">Activity 4</div>
-      <div class="w-64 h-40 bg-gray-800 rounded-lg shadow-md flex items-center justify-center text-gray-500">Activity 5</div>
-      <div class="w-64 h-40 bg-gray-800 rounded-lg shadow-md flex items-center justify-center text-gray-500">Activity 6</div>
-      <div class="w-64 h-40 bg-gray-800 rounded-lg shadow-md flex items-center justify-center text-gray-500">Activity 7</div>
-      <div class="w-64 h-40 bg-gray-800 rounded-lg shadow-md flex items-center justify-center text-gray-500">Activity 8</div>
-      <div class="w-64 h-40 bg-gray-800 rounded-lg shadow-md flex items-center justify-center text-gray-500">Activity 9</div>
-      <div class="w-64 h-40 bg-gray-800 rounded-lg shadow-md flex items-center justify-center text-gray-500">Activity 10</div>
-      <div class="w-64 h-40 bg-gray-800 rounded-lg shadow-md flex items-center justify-center text-gray-500">Activity 11</div>
-      <div class="w-64 h-40 bg-gray-800 rounded-lg shadow-md flex items-center justify-center text-gray-500">Activity 12</div>
-      <div class="w-64 h-40 bg-gray-800 rounded-lg shadow-md flex items-center justify-center text-gray-500">Activity 13</div>
-      <div class="w-64 h-40 bg-gray-800 rounded-lg shadow-md flex items-center justify-center text-gray-500">Activity 14</div>
-      <div class="w-64 h-40 bg-gray-800 rounded-lg shadow-md flex items-center justify-center text-gray-500">Activity 15</div>
-    </div>
+  <div class="overflow-x-auto flex flex-nowrap gap-6 px-4 scrollbar-hide" id="activity-carousel" style="scroll-behavior: smooth;">
+      <!-- 15 placeholder cards -->
+      <div class="w-64 h-40 flex-shrink-0 bg-gray-700 rounded-lg shadow-md flex items-center justify-center text-gray-300">Activity 1</div>
+      <div class="w-64 h-40 flex-shrink-0 bg-gray-700 rounded-lg shadow-md flex items-center justify-center text-gray-300">Activity 2</div>
+      <div class="w-64 h-40 flex-shrink-0 bg-gray-700 rounded-lg shadow-md flex items-center justify-center text-gray-300">Activity 3</div>
+      <div class="w-64 h-40 flex-shrink-0 bg-gray-700 rounded-lg shadow-md flex items-center justify-center text-gray-300">Activity 4</div>
+      <div class="w-64 h-40 flex-shrink-0 bg-gray-700 rounded-lg shadow-md flex items-center justify-center text-gray-300">Activity 5</div>
+      <div class="w-64 h-40 flex-shrink-0 bg-gray-700 rounded-lg shadow-md flex items-center justify-center text-gray-300">Activity 6</div>
+      <div class="w-64 h-40 flex-shrink-0 bg-gray-700 rounded-lg shadow-md flex items-center justify-center text-gray-300">Activity 7</div>
+      <div class="w-64 h-40 flex-shrink-0 bg-gray-700 rounded-lg shadow-md flex items-center justify-center text-gray-300">Activity 8</div>
+      <div class="w-64 h-40 flex-shrink-0 bg-gray-700 rounded-lg shadow-md flex items-center justify-center text-gray-300">Activity 9</div>
+      <div class="w-64 h-40 flex-shrink-0 bg-gray-700 rounded-lg shadow-md flex items-center justify-center text-gray-300">Activity 10</div>
+      <div class="w-64 h-40 flex-shrink-0 bg-gray-700 rounded-lg shadow-md flex items-center justify-center text-gray-300">Activity 11</div>
+      <div class="w-64 h-40 flex-shrink-0 bg-gray-700 rounded-lg shadow-md flex items-center justify-center text-gray-300">Activity 12</div>
+      <div class="w-64 h-40 flex-shrink-0 bg-gray-700 rounded-lg shadow-md flex items-center justify-center text-gray-300">Activity 13</div>
+      <div class="w-64 h-40 flex-shrink-0 bg-gray-700 rounded-lg shadow-md flex items-center justify-center text-gray-300">Activity 14</div>
+      <div class="w-64 h-40 flex-shrink-0 bg-gray-700 rounded-lg shadow-md flex items-center justify-center text-gray-300">Activity 15</div>
   </div>
 </section>
+<hr>
 
 <!-- Team Section -->
 
 <section id="team" class="py-20 bg-black">
   <h2 class="text-4xl font-bold text-center text-cyan-400 mb-12">Our Team</h2>
   <div class="flex flex-wrap justify-center gap-12">
-    <div class="text-center hover:shadow-cyan-400 hover:scale-105 transition transform">
-      <img src="assets/member1.png" class="w-32 h-32 rounded-full mx-auto mb-2 shadow-lg" alt="Member 1">
-      <p class="font-bold">Member 1</p>
+    <div class="text-center bg-gray-800 p-6 rounded-lg hover:shadow-cyan-400 hover:scale-105 transition transform">
+      <img src="assets/member1.png" class="w-36 h-36 rounded-full mx-auto mb-2 shadow-lg" alt="Member 1">
+      <p class="font-bold">Abdul Moiz</p>
       <p>Role</p>
     </div>
-    <div class="text-center hover:shadow-cyan-400 hover:scale-105 transition transform">
-      <img src="assets/member2.png" class="w-32 h-32 rounded-full mx-auto mb-2 shadow-lg" alt="Member 2">
-      <p class="font-bold">Member 2</p>
+    <div class="text-center bg-gray-800 p-6 rounded-lg hover:shadow-cyan-400 hover:scale-105 transition transform">
+      <img src="assets/member2.png" class="w-36 h-36 rounded-full mx-auto mb-2 shadow-lg" alt="Member 2">
+      <p class="font-bold">Ayan Usman</p>
       <p>Role</p>
     </div>
-    <div class="text-center hover:shadow-cyan-400 hover:scale-105 transition transform">
-      <img src="assets/member3.png" class="w-32 h-32 rounded-full mx-auto mb-2 shadow-lg" alt="Member 3">
-      <p class="font-bold">Member 3</p>
+    <div class="text-center bg-gray-800 p-6 rounded-lg hover:shadow-cyan-400 hover:scale-105 transition transform">
+      <img src="assets/member3.png" class="w-36 h-36 rounded-full mx-auto mb-2 shadow-lg" alt="Member 3">
+      <p class="font-bold">Rajab Shabir</p>
       <p>Role</p>
     </div>
-    <div class="text-center hover:shadow-cyan-400 hover:scale-105 transition transform">
-      <img src="assets/member4.png" class="w-32 h-32 rounded-full mx-auto mb-2 shadow-lg" alt="Member 4">
-      <p class="font-bold">Member 4</p>
+    <div class="text-center bg-gray-800 p-6 rounded-lg hover:shadow-cyan-400 hover:scale-105 transition transform">
+      <img src="assets/member4.png" class="w-36 h-36 rounded-full mx-auto mb-2 shadow-lg" alt="Member 4">
+      <p class="font-bold">Ali Waqas</p>
       <p>Role</p>
     </div>
   </div>
 </section>
+<hr>
+
+<hr>
+
+<!-- Evidence Gallery -->
+
+<section id="gallery" class="py-20 bg-black">
+  <h2 class="text-4xl font-bold text-center text-cyan-400 mb-12">
+    Awareness Presentation
+  </h2>
+
+  <div class="relative overflow-hidden">
+
+    <div id="gallery-carousel"
+         class="flex gap-6 px-6 overflow-x-hidden">
+
+      <!-- 10 Addable Images -->
+      <!-- Replace src with your real images later -->
+
+      <img src="assets/gallery1.jpg" class="gallery-img w-72 h-48 object-cover rounded-lg cursor-pointer flex-shrink-0">
+      <img src="assets/gallery2.jpg" class="gallery-img w-72 h-48 object-cover rounded-lg cursor-pointer flex-shrink-0">
+      <img src="assets/gallery3.jpg" class="gallery-img w-72 h-48 object-cover rounded-lg cursor-pointer flex-shrink-0">
+      <img src="assets/gallery4.jpg" class="gallery-img w-72 h-48 object-cover rounded-lg cursor-pointer flex-shrink-0">
+      <img src="assets/gallery5.jpg" class="gallery-img w-72 h-48 object-cover rounded-lg cursor-pointer flex-shrink-0">
+      <img src="assets/gallery6.jpg" class="gallery-img w-72 h-48 object-cover rounded-lg cursor-pointer flex-shrink-0">
+      <img src="assets/gallery7.jpg" class="gallery-img w-72 h-48 object-cover rounded-lg cursor-pointer flex-shrink-0">
+      <img src="assets/gallery8.jpg" class="gallery-img w-72 h-48 object-cover rounded-lg cursor-pointer flex-shrink-0">
+      <img src="assets/gallery9.jpg" class="gallery-img w-72 h-48 object-cover rounded-lg cursor-pointer flex-shrink-0">
+      <img src="assets/gallery10.jpg" class="gallery-img w-72 h-48 object-cover rounded-lg cursor-pointer flex-shrink-0">
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Survey Section -->
+
+<section id="survey" class="py-20 bg-gray-900">
+  <h2 class="text-4xl font-bold text-center text-cyan-400 mb-10">Surveys</h2>
+
+  <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+
+    <!-- Long Survey -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScP5fEVEOX0TrD6CksL7O38Jlue14rMzsbm4Wvkryxh6EL90w/viewform?usp=dialog"
+       target="_blank"
+       class="bg-cyan-500 text-black py-3 px-8 rounded-lg font-semibold
+              hover:bg-cyan-400 hover:shadow-[0_0_20px_rgba(0,255,255,0.6)]
+              transition duration-300 transform hover:scale-105">
+       Long Survey
+    </a>
+
+    <!-- Short Survey -->
+    <a href="#"
+       target="_blank"
+       class="border border-cyan-500 text-cyan-400 py-3 px-8 rounded-lg font-semibold
+              hover:bg-cyan-500 hover:text-black
+              hover:shadow-[0_0_20px_rgba(0,255,255,0.6)]
+              transition duration-300 transform hover:scale-105">
+       Short Survey
+    </a>
+
+  </div>
+</section>
+<hr>
+
 
 <!-- Contact Section -->
 
@@ -133,44 +202,191 @@ body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; background-c
     <input type="email" name="email" placeholder="Your Email" required class="p-3 border border-gray-700 rounded bg-black text-white focus:outline-none focus:border-cyan-400">
     <textarea name="message" placeholder="Your Message" required class="p-3 border border-gray-700 rounded bg-black text-white focus:outline-none focus:border-cyan-400"></textarea>
     <button type="submit" class="bg-cyan-500 text-black py-3 rounded hover:bg-cyan-400 hover:shadow-lg transition">Send</button>
+    <a href="https://www.instagram.com/beyondth4bin/" target="_blank"
+   class="flex justify-center items-center gap-2 mt-2 text-cyan-400 hover:text-white transition">
+
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+       viewBox="0 0 16 16">
+    <path d="M8 0C5.829 0 5.555.01 4.703.048 3.85.087 3.269.222 2.76.415a5.385 5.385 0 0 0-1.94 1.26A5.385 5.385 0 0 0 .415 3.615C.222 4.124.087 4.705.048 5.558.01 6.41 0 6.684 0 8.855c0 2.171.01 2.445.048 3.297.039.853.174 1.434.367 1.943a5.385 5.385 0 0 0 1.26 1.94 5.385 5.385 0 0 0 1.94 1.26c.509.193 1.09.328 1.943.367.852.038 1.126.048 3.297.048 2.171 0 2.445-.01 3.297-.048.853-.039 1.434-.174 1.943-.367a5.385 5.385 0 0 0 1.94-1.26 5.385 5.385 0 0 0 1.26-1.94c.193-.509.328-1.09.367-1.943.038-.852.048-1.126.048-3.297 0-2.171-.01-2.445-.048-3.297-.039-.853-.174-1.434-.367-1.943a5.385 5.385 0 0 0-1.26-1.94 5.385 5.385 0 0 0-1.94-1.26C11.434.222 10.853.087 10 .048 9.148.01 8.874 0 6.703 0H8zm0 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm4.406-1.845a.96.96 0 1 1-1.92 0 .96.96 0 0 1 1.92 0z"/>
+  </svg>
+
+  Instagram
+</a>
+
   </form>
 </section>
+<hr>
 
 <!-- Footer -->
 
-<footer class="bg-black py-6 text-center text-gray-500">© 2026 Beyond The Bin</footer>
+<footer class="bg-gray-800 py-8 text-gray-400 w-full">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
 
-<!-- JS Counters -->
+    <div class="text-sm text-center md:text-left">
+      <p>© Beyond The Bin ~2026</p>
+      <p>Email: beyondth4bin@gmail.com</p>
+    </div>
+
+    <div class="flex flex-col items-center gap-3">
+
+      <a href="https://www.instagram.com/beyondth4bin/"
+         target="_blank"
+         class="text-gray-500 hover:text-white transition">
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+             viewBox="0 0 16 16">
+          <path d="M8 0C5.829 0 5.555.01 4.703.048 3.85.087 3.269.222 2.76.415a5.385 5.385 0 0 0-1.94 1.26A5.385 5.385 0 0 0 .415 3.615C.222 4.124.087 4.705.048 5.558.01 6.41 0 6.684 0 8.855c0 2.171.01 2.445.048 3.297.039.853.174 1.434.367 1.943a5.385 5.385 0 0 0 1.26 1.94 5.385 5.385 0 0 0 1.94 1.26c.509.193 1.09.328 1.943.367.852.038 1.126.048 3.297.048 2.171 0 2.445-.01 3.297-.048.853-.039 1.434-.174 1.943-.367a5.385 5.385 0 0 0 1.94-1.26 5.385 5.385 0 0 0 1.26-1.94c.193-.509.328-1.09.367-1.943.038-.852.048-1.126.048-3.297 0-2.171-.01-2.445-.048-3.297-.039-.853-.174-1.434-.367-1.943a5.385 5.385 0 0 0-1.26-1.94 5.385 5.385 0 0 0-1.94-1.26C11.434.222 10.853.087 10 .048 9.148.01 8.874 0 6.703 0H8z"/>
+        </svg>
+      </a>
+
+      <p class="text-sm text-gray-400">
+        This Page has been Viewed 
+        <span id="view-count" class="text-cyan-400 font-semibold">Loading...</span>
+        times
+      </p>
+
+    </div>
+
+  </div>
+</footer>
+
+
+
+<!-- JS -->
 
 <script>
-const counters = document.querySelectorAll('.counter');
-counters.forEach(counter => {
-  counter.innerText = '0';
-  const updateCount = () => {
-    const target = +counter.getAttribute('data-target');
-    const count = +counter.innerText;
-    const increment = target / 200;
-    if(count < target){
-      counter.innerText = Math.ceil(count + increment);
-      setTimeout(updateCount, 10);
-    } else {
-      counter.innerText = target;
+window.addEventListener("load", function() {
+
+  /* ===== COUNTERS ===== */
+  const counters = document.querySelectorAll('.counter');
+
+  counters.forEach(counter => {
+    counter.innerText = '0';
+
+    const updateCount = () => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText;
+      const increment = target / 200;
+
+      if (count < target) {
+        counter.innerText = Math.ceil(count + increment);
+        setTimeout(updateCount, 10);
+      } else {
+        counter.innerText = target;
+      }
+    };
+
+    const observer = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) updateCount();
+    }, { threshold: 0.5 });
+
+    observer.observe(counter);
+  });
+
+
+  /* ===== ACTIVITIES AUTO SCROLL ===== */
+  const carousel = document.getElementById('activity-carousel');
+
+  if (carousel) {
+    let speed = 1.8;
+
+    function autoScroll() {
+      if (carousel.scrollLeft >= carousel.scrollWidth - carousel.clientWidth) {
+        carousel.scrollLeft = 0;
+      } else {
+        carousel.scrollLeft += speed;
+      }
+      requestAnimationFrame(autoScroll);
     }
-  };
-  const observer = new IntersectionObserver(entries => {
-    if(entries[0].isIntersecting) updateCount();
-  }, { threshold: 0.5 });
-  observer.observe(counter);
+
+    requestAnimationFrame(autoScroll);
+  }
+
+
+  /* ===== GALLERY AUTO SCROLL ===== */
+  const gallery = document.getElementById('gallery-carousel');
+
+  if (gallery) {
+    let speed = 1.5;
+
+    function autoScrollGallery() {
+      if (gallery.scrollLeft >= gallery.scrollWidth - gallery.clientWidth) {
+        gallery.scrollLeft = 0;
+      } else {
+        gallery.scrollLeft += speed;
+      }
+      requestAnimationFrame(autoScrollGallery);
+    }
+
+    requestAnimationFrame(autoScrollGallery);
+  }
+
+
+  /* ===== IMAGE ZOOM ===== */
+  const images = document.querySelectorAll('.gallery-img');
+
+  images.forEach(img => {
+    img.addEventListener('click', function() {
+
+      const overlay = document.createElement('div');
+      overlay.style.position = "fixed";
+      overlay.style.top = "0";
+      overlay.style.left = "0";
+      overlay.style.width = "100%";
+      overlay.style.height = "100%";
+      overlay.style.background = "rgba(0,0,0,0.9)";
+      overlay.style.display = "flex";
+      overlay.style.justifyContent = "center";
+      overlay.style.alignItems = "center";
+      overlay.style.zIndex = "9999";
+      overlay.style.cursor = "pointer";
+
+      const bigImg = document.createElement('img');
+      bigImg.src = this.src;
+      bigImg.style.maxWidth = "90%";
+      bigImg.style.maxHeight = "90%";
+      bigImg.style.borderRadius = "12px";
+
+      overlay.appendChild(bigImg);
+      document.body.appendChild(overlay);
+
+      overlay.addEventListener('click', () => {
+        document.body.removeChild(overlay);
+      });
+
+    });
+  });
+
+
+  /* ===== PAGE VIEW COUNTER ===== */
+  fetch('https://api.countapi.xyz/hit/beyondthebin2026/visits')
+    .then(res => res.json())
+    .then(res => {
+      document.getElementById('view-count').innerText = res.value;
+    });
+
 });
 </script>
 
-<!-- Animations -->
+
 
 <style>
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);} }
+html, body {
+  height: auto;
+  min-height: 100%;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
 .animate-fadeIn { animation: fadeIn 1s forwards; }
 .animate-fadeIn.delay-200 { animation-delay: 0.2s; }
-@keyframes bounce { 0%,100% { transform: translateY(0);} 50% { transform: translateY(-20px);} }
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0);}
+  50% { transform: translateY(-20px);}
+}
 .animate-bounce { animation: bounce 2s infinite; }
 </style>
 
