@@ -6,16 +6,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Beyond The Bin</title>
 <script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-html { scroll-behavior: smooth; }
-body { font-family: 'Inter', sans-serif; }
+body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
 </style>
 </head>
 <body class="bg-gradient-to-b from-blue-50 via-white to-blue-100 text-gray-800">
 
 <!-- Navbar -->
 
-<nav class="fixed w-full bg-white/80 backdrop-blur-md shadow-md z-50">
+<nav class="fixed w-full bg-white/70 backdrop-blur-md shadow-md z-50">
   <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
     <div class="flex items-center gap-2">
       <img src="assets/logo.png" class="w-10 h-10" alt="Logo">
@@ -33,24 +35,24 @@ body { font-family: 'Inter', sans-serif; }
 
 <!-- Hero + Counter Section -->
 
-<section id="home" class="min-h-screen flex flex-col justify-center items-center pt-24">
+<section id="home" class="min-h-screen flex flex-col justify-center items-center pt-28">
   <div class="flex flex-col md:flex-row items-center gap-10">
-    <div class="w-48 h-48 bg-white shadow-lg rounded-full flex justify-center items-center">
-      <img src="assets/logo.png" alt="Logo" class="w-32 h-32">
+    <div class="w-56 h-56 bg-white shadow-2xl rounded-full flex justify-center items-center animate-bounce">
+      <img src="assets/logo.png" alt="Logo" class="w-40 h-40">
     </div>
     <div class="flex flex-col gap-8 text-center md:text-left">
-      <h1 class="text-4xl md:text-5xl font-bold">Beyond The Bin</h1>
-      <p class="text-lg md:text-xl max-w-lg">Tracking our impact and efforts to reduce plastic waste.</p>
+      <h1 class="text-5xl md:text-6xl font-bold animate-fadeIn">Beyond The Bin</h1>
+      <p class="text-lg md:text-xl max-w-lg animate-fadeIn delay-200">Tracking our impact and efforts to reduce plastic waste.</p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
-        <div class="bg-white shadow-md rounded p-6">
+        <div class="bg-white shadow-xl rounded-lg p-6 hover:scale-105 transform transition">
           <p class="text-4xl font-bold counter" data-target="120">0</p>
           <p class="mt-2 font-medium">Bottles Collected</p>
         </div>
-        <div class="bg-white shadow-md rounded p-6">
+        <div class="bg-white shadow-xl rounded-lg p-6 hover:scale-105 transform transition">
           <p class="text-4xl font-bold counter" data-target="15">0</p>
           <p class="mt-2 font-medium">Sessions Conducted</p>
         </div>
-        <div class="bg-white shadow-md rounded p-6">
+        <div class="bg-white shadow-xl rounded-lg p-6 hover:scale-105 transform transition">
           <p class="text-4xl font-bold counter" data-target="50">0</p>
           <p class="mt-2 font-medium">Surveys Submitted</p>
         </div>
@@ -61,45 +63,47 @@ body { font-family: 'Inter', sans-serif; }
 
 <!-- Our Goal Page -->
 
-<section id="goal" class="py-20 bg-gradient-to-r from-blue-100 via-white to-blue-100">
-  <h2 class="text-3xl font-bold text-center mb-8">Our Goal</h2>
+<section id="goal" class="py-20 bg-gradient-to-r from-blue-100 via-white to-blue-100 relative overflow-hidden">
+  <h2 class="text-4xl font-bold text-center mb-8">Our Goal</h2>
   <p class="text-center text-lg max-w-3xl mx-auto">bla blah</p>
+  <div class="absolute top-0 left-0 w-32 h-32 bg-blue-200 rounded-full opacity-20 animate-spin-slow"></div>
+  <div class="absolute bottom-0 right-0 w-48 h-48 bg-blue-300 rounded-full opacity-20 animate-pulse-slow"></div>
 </section>
 
 <!-- Activities Page -->
 
 <section id="activities" class="py-20 bg-blue-50">
-  <h2 class="text-3xl font-bold text-center mb-8">Activities</h2>
+  <h2 class="text-4xl font-bold text-center mb-12">Activities</h2>
   <div class="flex flex-wrap justify-center gap-8">
-    <!-- Add images/videos here -->
-    <div class="w-64 h-40 bg-gray-200 rounded shadow flex items-center justify-center">Image/Video 1</div>
-    <div class="w-64 h-40 bg-gray-200 rounded shadow flex items-center justify-center">Image/Video 2</div>
-    <div class="w-64 h-40 bg-gray-200 rounded shadow flex items-center justify-center">Image/Video 3</div>
+    <div class="w-64 h-40 bg-gray-200 rounded shadow flex items-center justify-center">Activity 1</div>
+    <div class="w-64 h-40 bg-gray-200 rounded shadow flex items-center justify-center">Activity 2</div>
+    <div class="w-64 h-40 bg-gray-200 rounded shadow flex items-center justify-center">Activity 3</div>
+    <div class="w-64 h-40 bg-gray-200 rounded shadow flex items-center justify-center">Activity 4</div>
   </div>
 </section>
 
 <!-- Team Section -->
 
 <section id="team" class="py-20 bg-white">
-  <h2 class="text-3xl font-bold text-center mb-12">Our Team</h2>
+  <h2 class="text-4xl font-bold text-center mb-12">Our Team</h2>
   <div class="flex flex-wrap justify-center gap-12">
     <div class="text-center">
-      <img src="assets/member1.png" class="w-32 h-32 rounded-full mx-auto mb-2">
+      <img src="assets/member1.png" class="w-32 h-32 rounded-full mx-auto mb-2 shadow-lg" alt="Member 1">
       <p class="font-bold">Member 1</p>
       <p>Role</p>
     </div>
     <div class="text-center">
-      <img src="assets/member2.png" class="w-32 h-32 rounded-full mx-auto mb-2">
+      <img src="assets/member2.png" class="w-32 h-32 rounded-full mx-auto mb-2 shadow-lg" alt="Member 2">
       <p class="font-bold">Member 2</p>
       <p>Role</p>
     </div>
     <div class="text-center">
-      <img src="assets/member3.png" class="w-32 h-32 rounded-full mx-auto mb-2">
+      <img src="assets/member3.png" class="w-32 h-32 rounded-full mx-auto mb-2 shadow-lg" alt="Member 3">
       <p class="font-bold">Member 3</p>
       <p>Role</p>
     </div>
     <div class="text-center">
-      <img src="assets/member4.png" class="w-32 h-32 rounded-full mx-auto mb-2">
+      <img src="assets/member4.png" class="w-32 h-32 rounded-full mx-auto mb-2 shadow-lg" alt="Member 4">
       <p class="font-bold">Member 4</p>
       <p>Role</p>
     </div>
@@ -108,13 +112,13 @@ body { font-family: 'Inter', sans-serif; }
 
 <!-- Contact Section -->
 
-<section id="contact" class="py-20 bg-blue-100">
-  <h2 class="text-3xl font-bold text-center mb-6">Contact Us</h2>
-  <form action="https://formspree.io/f/xqedqjbj" method="POST" class="max-w-md mx-auto flex flex-col gap-4">
+<section id="contact" class="py-20 bg-gradient-to-r from-blue-200 via-white to-blue-200 backdrop-blur-md">
+  <h2 class="text-4xl font-bold text-center mb-6">Contact Us</h2>
+  <form action="https://formspree.io/f/xqedqjbj" method="POST" class="max-w-md mx-auto flex flex-col gap-4 bg-white/70 p-8 rounded-xl shadow-lg backdrop-blur-sm">
     <input type="text" name="name" placeholder="Your Name" required class="p-3 border rounded">
     <input type="email" name="email" placeholder="Your Email" required class="p-3 border rounded">
     <textarea name="message" placeholder="Your Message" required class="p-3 border rounded"></textarea>
-    <button type="submit" class="bg-blue-500 text-white py-3 rounded hover:bg-blue-600">Send</button>
+    <button type="submit" class="bg-blue-500 text-white py-3 rounded hover:bg-blue-600 transition">Send</button>
   </form>
 </section>
 
@@ -145,6 +149,19 @@ counters.forEach(counter => {
   observer.observe(counter);
 });
 </script>
+
+<!-- Simple Animations -->
+
+<style>
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);} }
+.animate-fadeIn { animation: fadeIn 1s forwards; }
+.animate-fadeIn.delay-200 { animation-delay: 0.2s; }
+.animate-bounce { animation: bounce 2s infinite; }
+@keyframes spin-slow { from { transform: rotate(0deg);} to { transform: rotate(360deg);} }
+.animate-spin-slow { animation: spin-slow 20s linear infinite; }
+@keyframes pulse-slow { 0%,100% { opacity: 0.2; } 50% { opacity: 0.4; }}
+.animate-pulse-slow { animation: pulse-slow 6s infinite; }
+</style>
 
 </body>
 </html>
