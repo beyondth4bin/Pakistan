@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GP Project</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+html { scroll-behavior: smooth; }
+</style>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+<!-- Navbar -->
+
+<nav class="fixed w-full bg-white shadow-md z-50">
+  <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+    <div class="font-bold text-xl">GP Project</div>
+    <div class="hidden md:flex space-x-6">
+      <a href="#home" class="hover:text-blue-500">Home</a>
+      <a href="#team" class="hover:text-blue-500">Team</a>
+      <a href="#counters" class="hover:text-blue-500">Counters</a>
+      <a href="#survey" class="hover:text-blue-500">Survey</a>
+      <a href="#contact" class="hover:text-blue-500">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+
+<section id="home" class="h-screen flex flex-col justify-center items-center bg-blue-50 pt-16">
+  <img src="assets/logo.png" alt="Logo" class="w-40 mb-4">
+  <h1 class="text-4xl font-bold text-center">Our GP Project</h1>
+  <p class="mt-2 text-center max-w-xl">Our mission: … describe your goal here …</p>
+</section>
+
+<!-- Team Section -->
+
+<section id="team" class="py-16 bg-white">
+  <h2 class="text-3xl font-bold text-center mb-8">Our Team</h2>
+  <div class="flex flex-wrap justify-center gap-8">
+    <div class="text-center">
+      <img src="assets/member1.png" class="w-32 h-32 rounded-full mx-auto mb-2">
+      <p class="font-bold">Name 1</p>
+      <p>Role</p>
+    </div>
+    <div class="text-center">
+      <img src="assets/member2.png" class="w-32 h-32 rounded-full mx-auto mb-2">
+      <p class="font-bold">Name 2</p>
+      <p>Role</p>
+    </div>
+  </div>
+</section>
+
+<!-- Counters Section -->
+
+<section id="counters" class="py-16 bg-blue-50">
+  <h2 class="text-3xl font-bold text-center mb-12">Our Progress</h2>
+  <div class="flex flex-wrap justify-center gap-12 text-center">
+    <div>
+      <p class="text-5xl font-bold counter" data-target="120">0</p>
+      <p>Bottles Collected</p>
+    </div>
+    <div>
+      <p class="text-5xl font-bold counter" data-target="15">0</p>
+      <p>Sessions Conducted</p>
+    </div>
+    <div>
+      <p class="text-5xl font-bold counter" data-target="50">0</p>
+      <p>Surveys Submitted</p>
+    </div>
+  </div>
+</section>
+
+<!-- Survey Section -->
+
+<section id="survey" class="py-16 bg-white">
+  <h2 class="text-3xl font-bold text-center mb-6">Take Our Survey</h2>
+  <div class="text-center">
+    <a href="YOUR_GOOGLE_FORM_LINK" target="_blank" class="px-6 py-3 bg-blue-500 text-white rounded hover:bg-blue-600">Go to Survey</a>
+  </div>
+</section>
+
+<!-- Contact Section -->
+
+<section id="contact" class="py-16 bg-blue-50">
+  <h2 class="text-3xl font-bold text-center mb-6">Contact Us</h2>
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="max-w-md mx-auto flex flex-col gap-4">
+    <input type="text" name="name" placeholder="Your Name" required class="p-3 border rounded">
+    <input type="email" name="email" placeholder="Your Email" required class="p-3 border rounded">
+    <textarea name="message" placeholder="Your Message" required class="p-3 border rounded"></textarea>
+    <button type="submit" class="bg-blue-500 text-white py-3 rounded hover:bg-blue-600">Send</button>
+  </form>
+</section>
+
+<!-- Footer -->
+
+<footer class="bg-white py-6 text-center text-gray-500">© 2026 GP Project</footer>
+
+<!-- JS Counters -->
+
+<script>
+const counters = document.querySelectorAll('.counter');
+counters.forEach(counter => {
+  counter.innerText = '0';
+  const updateCount = () => {
+    const target = +counter.getAttribute('data-target');
+    const count = +counter.innerText;
+    const increment = target / 200;
+    if(count < target){
+      counter.innerText = Math.ceil(count + increment);
+      setTimeout(updateCount, 10);
+    } else {
+      counter.innerText = target;
+    }
+  };
+  const observer = new IntersectionObserver(entries => {
+    if(entries[0].isIntersecting) updateCount();
+  }, { threshold: 0.5 });
+  observer.observe(counter);
+});
+</script>
+
+</body>
+</html>
