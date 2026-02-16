@@ -59,19 +59,23 @@ hr { border: 0; border-top: 1px solid #444; margin: 0; }
       </p>
 
       <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-6">
-        <div class="bg-black/70 shadow-lg rounded-lg p-6 hover:shadow-cyan-400 hover:scale-105 transition transform">
+        <div class="bg-black/70 shadow-[0_0_30px_rgba(0,255,255,0.8)] rounded-lg p-6 transition transform hover:shadow-[0_0_50px_rgba(0,255,255,1)] hover:scale-105">
+
           <p class="text-4xl font-bold counter" data-target="29">0</p>
           <p class="mt-2 font-medium">Bottles Collected</p>
         </div>
-        <div class="bg-black/70 shadow-lg rounded-lg p-6 hover:shadow-cyan-400 hover:scale-105 transition transform">
+        <div class="bg-black/70 shadow-[0_0_30px_rgba(0,255,255,0.8)] rounded-lg p-6 transition transform hover:shadow-[0_0_50px_rgba(0,255,255,1)] hover:scale-105">
+
           <p class="text-4xl font-bold counter" data-target="7">0</p>
           <p class="mt-2 font-medium">Sessions Conducted</p>
         </div>
-        <div class="bg-black/70 shadow-lg rounded-lg p-6 hover:shadow-cyan-400 hover:scale-105 transition transform">
+        <div class="bg-black/70 shadow-[0_0_30px_rgba(0,255,255,0.8)] rounded-lg p-6 transition transform hover:shadow-[0_0_50px_rgba(0,255,255,1)] hover:scale-105">
+
           <p class="text-4xl font-bold counter" data-target="16">0</p>
           <p class="mt-2 font-medium">Surveys Collected</p>
         </div>
-        <div class="bg-black/70 shadow-lg rounded-lg p-6 hover:shadow-cyan-400 hover:scale-105 transition transform">
+        <div class="bg-black/70 shadow-[0_0_30px_rgba(0,255,255,0.8)] rounded-lg p-6 transition transform hover:shadow-[0_0_50px_rgba(0,255,255,1)] hover:scale-105">
+
           <p class="text-4xl font-bold counter" data-target="5">0</p>
           <p class="mt-2 font-medium">Areas Cleaned</p>
         </div>
@@ -290,30 +294,44 @@ window.addEventListener("load", function() {
 const viewCountEl = document.getElementById('view-count');
 viewCountEl.innerText = '0'; // initialize immediately
 
-fetch('https://api.countapi.xyz/hit/beyondthebin2026/visits')
-  .then(res => res.json())
-  .then(res => {
-    if(res && res.value !== undefined){
-      const target = res.value;
-      let count = 0;
-      const increment = target / 200;
-
-      const update = () => {
-        if(count < target){
-          count += increment;
-          viewCountEl.innerText = Math.ceil(count);
-          requestAnimationFrame(update);
-        } else {
-          viewCountEl.innerText = target;
-        }
-      };
-      update();
-    }
+// Record this visit
+fetch('https://visitor.6developer.com/visit', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    domain: window.location.hostname,
+    page_path: window.location.pathname
   })
-  .catch(err => {
-    console.error('CountAPI error:', err);
-    viewCountEl.innerText = 'N/A';
-  });
+})
+.then(() => {
+  // Now get total visits
+  return fetch('https://visitor.6developer.com/visit?domain=' + encodeURIComponent(window.location.hostname));
+})
+.then(res => res.json())
+.then(data => {
+  if (data && data.totalVisits !== undefined) {
+    // Animate count up
+    const target = data.totalVisits;
+    let count = 0;
+    const increment = target / 200;
+
+    const update = () => {
+      if (count < target) {
+        count += increment;
+        viewCountEl.innerText = Math.ceil(count);
+        requestAnimationFrame(update);
+      } else {
+        viewCountEl.innerText = target;
+      }
+    };
+    update();
+  }
+})
+.catch(err => {
+  console.error('Visitor counter error:', err);
+  viewCountEl.innerText = '0';
+});
+
 });
 </script>
 </body>
