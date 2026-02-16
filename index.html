@@ -41,30 +41,51 @@ hr { border: 0; border-top: 1px solid #444; margin: 0; }
 
 <section id="home" class="min-h-screen flex flex-col justify-center items-center pt-28">
   <div class="flex flex-col md:flex-row items-center gap-12">
+    
     <div class="w-64 h-64 bg-black rounded-full flex justify-center items-center shadow-[0_0_20px_rgba(0,255,255,0.6)] animate-bounce">
       <img src="assets/logo.png" alt="Logo" class="w-56 h-56">
     </div>
+
     <div class="flex flex-col gap-8 text-center md:text-left">
-      <h1 class="text-5xl md:text-6xl font-bold text-cyan-400 animate-fadeIn">Beyond The Bin</h1>
-      <p class="text-lg md:text-xl max-w-lg animate-fadeIn delay-200">Tracking our impact and efforts to reduce plastic waste.</p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+      
+      <h1 class="text-5xl md:text-6xl font-bold text-cyan-400 animate-fadeIn">
+        Beyond The Bin
+      </h1>
+
+      <p class="text-lg md:text-xl max-w-lg animate-fadeIn delay-200">
+        Tracking our impact and efforts to reduce plastic waste.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-6">
+
         <div class="bg-black/70 shadow-lg rounded-lg p-6 hover:shadow-cyan-400 hover:scale-105 transition transform">
           <p class="text-4xl font-bold counter" data-target="29">0</p>
           <p class="mt-2 font-medium">Bottles Collected</p>
         </div>
+
         <div class="bg-black/70 shadow-lg rounded-lg p-6 hover:shadow-cyan-400 hover:scale-105 transition transform">
-          <p class="text-4xl font-bold counter" data-target="7">7</p>
+          <p class="text-4xl font-bold counter" data-target="7">0</p>
           <p class="mt-2 font-medium">Sessions Conducted</p>
         </div>
+
         <div class="bg-black/70 shadow-lg rounded-lg p-6 hover:shadow-cyan-400 hover:scale-105 transition transform">
-          <p class="text-4xl font-bold counter" data-target="16">16</p>
-          <p class="mt-2 font-medium">Surveys Submitted</p>
+          <p class="text-4xl font-bold counter" data-target="16">0</p>
+          <p class="mt-2 font-medium">Surveys Collected</p>
         </div>
+
+        <div class="bg-black/70 shadow-lg rounded-lg p-6 hover:shadow-cyan-400 hover:scale-105 transition transform">
+          <p class="text-4xl font-bold counter" data-target="5">0</p>
+          <p class="mt-2 font-medium">Areas Cleaned</p>
+        </div>
+
       </div>
+
     </div>
   </div>
 </section>
+
 <hr>
+
 
 <!-- Our Goal Section -->
 
@@ -79,7 +100,8 @@ hr { border: 0; border-top: 1px solid #444; margin: 0; }
 
 <section id="activities" class="py-20">
   <h2 class="text-4xl font-bold text-center text-cyan-400 mb-12">Activities</h2>
-  <div class="overflow-x-auto flex flex-nowrap gap-6 px-4 scrollbar-hide" id="activity-carousel" style="scroll-behavior: smooth;">
+  <div class="overflow-hidden flex flex-nowrap gap-6 px-4 scrollbar-hide"
+     id="activity-carousel">
       <!-- 15 placeholder cards -->
       <div class="w-64 h-40 flex-shrink-0 bg-gray-700 rounded-lg shadow-md flex items-center justify-center text-gray-300">Activity 1</div>
       <div class="w-64 h-40 flex-shrink-0 bg-gray-700 rounded-lg shadow-md flex items-center justify-center text-gray-300">Activity 2</div>
@@ -284,23 +306,33 @@ window.addEventListener("load", function() {
   });
 
 
-  /* ===== ACTIVITIES AUTO SCROLL ===== */
-  const carousel = document.getElementById('activity-carousel');
+/* ===== ACTIVITIES AUTO SCROLL (TRUE INFINITE LOOP) ===== */
+const carousel = document.getElementById('activity-carousel');
 
-  if (carousel) {
-    let speed = 1.8;
+if (carousel) {
 
-    function autoScroll() {
-      if (carousel.scrollLeft >= carousel.scrollWidth - carousel.clientWidth) {
-        carousel.scrollLeft = 0;
-      } else {
-        carousel.scrollLeft += speed;
-      }
-      requestAnimationFrame(autoScroll);
+  // Duplicate content ONCE
+  carousel.innerHTML += carousel.innerHTML;
+
+  // Disable native smooth behavior (prevents weird edge sticking)
+  carousel.style.scrollBehavior = "auto";
+
+  let speed = window.innerWidth < 768 ? 3.2 : 2.2; // slightly faster on both
+
+  function autoScroll() {
+
+    carousel.scrollLeft += speed;
+
+    // When we've scrolled past the original content
+    if (carousel.scrollLeft >= carousel.scrollWidth / 2) {
+      carousel.scrollLeft -= carousel.scrollWidth / 2;
     }
 
     requestAnimationFrame(autoScroll);
   }
+
+  requestAnimationFrame(autoScroll);
+}
 
 
   /* ===== GALLERY AUTO SCROLL ===== */
